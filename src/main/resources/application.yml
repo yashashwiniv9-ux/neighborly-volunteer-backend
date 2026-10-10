@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+        secure: ${COOKIE_SECURE:false}
+
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/volunteer_match}
+    username: ${DATABASE_USERNAME:volunteer}
+    password: ${DATABASE_PASSWORD:volunteer}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  jackson:
+    default-property-inclusion: non_null
+
+app:
+  frontend-origin: ${FRONTEND_ORIGIN:http://localhost:5173}
