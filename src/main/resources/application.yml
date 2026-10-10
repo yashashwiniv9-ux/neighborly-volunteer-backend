@@ -24,4 +24,4 @@ spring:
     default-property-inclusion: non_null
 
 app:
-  frontend-origin: ${FRONTEND_ORIGIN:http://localhost:5173}
+  frontend-origins: ${FRONTEND_ORIGINS:http://localhost:5173,https://neighborly-volunteer-frontend.onrender.com}
